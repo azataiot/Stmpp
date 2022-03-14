@@ -51,9 +51,11 @@ typedef uint8_t byte;
 
 namespace azt {
 
-	byte * gpio(std::string gpio_name);
-
 	void digitalWrite(uint8_t pin, uint8_t val);
+
+	enum class PinBank{
+		PA,PB,PC,PD,PE,PF
+	};
 
 	enum status
 	{
