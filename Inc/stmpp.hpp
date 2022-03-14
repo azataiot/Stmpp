@@ -51,11 +51,25 @@ typedef uint8_t byte;
 
 namespace azt {
 
-	void digitalWrite(uint8_t pin, uint8_t val);
+	/*
+	 * @brief from HIGH and LOW to HAL GPIO_PinState
+	 */
+	GPIO_PinState mapPinState(uint8_t val);
 
-	enum class PinBank{
-		PA,PB,PC,PD,PE,PF
-	};
+	/*
+	 * @brief from PAX to GPIO_TypeDef
+	 */
+	GPIO_TypeDef* mapPinBank(std::string pin_bank);
+	/*
+	 * @brief from Pin number to HAL GPIO_PIN_X
+	 */
+	uint16_t mapPinNumber(int pin_num);
+
+
+	void digitalWrite(uint8_t pin, uint8_t val);
+	GPIO_PinState digitalRead(uint8_t pin);
+
+
 
 	enum status
 	{
