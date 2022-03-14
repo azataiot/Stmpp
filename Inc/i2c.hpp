@@ -9,7 +9,7 @@
 #define INC_AZT_I2C_HPP_
 
 #include "main.h"
-#include "core.hpp"
+#include "stmpp.hpp"
 
 namespace azt{
 

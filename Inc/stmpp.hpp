@@ -10,7 +10,8 @@
 
 // includes
 #include <stdint.h>
-
+#include "string"
+#include "gpio.h"
 // high low logic value
 #define HIGH 0x1
 #define LOW  0x0
@@ -42,9 +43,17 @@
 typedef bool boolean;
 typedef uint8_t byte;
 
+// pin selection
+
+
+
 
 
 namespace azt {
+
+	byte * gpio(std::string gpio_name);
+
+	void digitalWrite(uint8_t pin, uint8_t val);
 
 	enum status
 	{
