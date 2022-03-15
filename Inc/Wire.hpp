@@ -8,19 +8,21 @@
 #ifndef INC_AZT_I2C_HPP_
 #define INC_AZT_I2C_HPP_
 
-//#include "main.h"
+#include "main.h"
 #include "Stmpp.hpp"
 
 namespace azt{
 
-	class I2C {
+	class Wire {
 	public:
-		I2C(); // base type.
+		Wire(); // base type.
 
 		/** @brief Check the i2c line, and init the i2c device.
 		 * @param *hi2c: I2C handler to use. (which i2c to use)
-		 * @param address: device address.
+		 * @param address: device address (7bit).
 		 * @note which i2c line to use, and init the device id.
+		 * This function can also be used to check whether the device is ready
+		 *  or exists on the i2c bus.
 		 */
 		status begin(I2C_HandleTypeDef *hi2c, uint8_t address);
 
@@ -30,7 +32,7 @@ namespace azt{
 		* @param length: length of the data to be read.
 		* @retval status.
 		*/
-		status read(uint16_t address, uint8_t *data, uint16_t length);
+		status read(uint16_t address,  uint16_t length, uint8_t *data);
 
 		/** @brief Write an array of bytes to the device memory.
 		 * @param address: start address of the memory to write.
