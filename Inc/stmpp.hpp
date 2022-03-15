@@ -9,9 +9,10 @@
 #define INC_AZT_CORE_HPP_
 
 // includes
+#include <string>
 #include "main.h"
 #include <stdint.h>
-#include "string"
+
 //#include "gpio.h"
 // high low logic value
 #define HIGH 0x1

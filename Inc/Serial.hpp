@@ -17,7 +17,7 @@ class Serial {
 public:
 	Serial(); // base type.
 
-	status begin(UART_HandleTypeDef* huart);
+	status begin(UART_HandleTypeDef *huart);
 
 	status print(std::string message);
 
@@ -30,7 +30,7 @@ public:
 	status read(byte *data, uint16_t length);
 
 private:
-	UART_HandleTypeDef* uart_handler;
+	UART_HandleTypeDef *uart_handler;
 };
 
 }

@@ -5,8 +5,8 @@
  *      Author: Yaakov Azat
  */
 
-#include <Stmpp.hpp>
 #include <Serial.hpp>
+#include <Stmpp.hpp>
 
 namespace azt {
 // base
